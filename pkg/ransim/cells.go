@@ -192,7 +192,7 @@ func geoToCell(cmd *cobra.Command, cell *types.Cell, update bool) {
 		cell.Location = &types.Point{Lat: lat, Lng: lng}
 	} else {
 		if !update || cmd.Flags().Changed("lat") {
-			cell.Location.Lng = lng
+			cell.Location.Lat = lat
 		}
 		if !update || cmd.Flags().Changed("lng") {
 			cell.Location.Lng = lng
